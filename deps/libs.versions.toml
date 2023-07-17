@@ -1,0 +1,34 @@
+[versions]
+
+crashlyticskios = "0.6.0"
+coroutines = "1.6.4"
+
+ktor = "2.3.2"
+kotlin = "1.8.20"
+kotlinxCollectionsImmutable = "0.3.5"
+kotlinxDatetime = "0.4.0"
+mokoParcelize = "0.8.0"
+mokoResourceGenerator = "0.20.1"
+sqlDelight = "1.5.5"
+serialization = "1.4.1"
+supabase = "1.1.1"
+composeBom = "2023.01.00"
+
+pluginGradle = "8.0.2"
+
+[libraries]
+plugin-gradle = { module = "com.android.tools.build:gradle", version.ref = "pluginGradle" }
+plugin-kotlin-gradle  = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+plugin-kotlin-serialization = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
+plugin-sqldelight-gradle = { module = "com.squareup.sqldelight:gradle-plugin", version.ref = "sqlDelight" }
+plugin-moko-resources-generator = { module = "dev.icerock.moko:resources-generator", version.ref = "mokoResourceGenerator"}
+
+sqldelight-runtime = { module = "com.squareup.sqldelight:runtime", version.ref = "sqlDelight" }
+sqldelight-coroutines-extensions = { module = "com.squareup.sqldelight:coroutines-extensions", version.ref = "sqlDelight" }
+supabase-bom = { module = "io.github.jan-tennert.supabase:bom", version.ref = "supabase" }
+supabase-gotrue-kt = { module = "io.github.jan-tennert.supabase:gotrue-kt", version.ref = "supabase" }
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+
+[bundles]
+sqldelight = ["sqldelight-runtime", "sqldelight-coroutines-extensions"]
+supabase = ["supabase-gotrue-kt"]
